@@ -8,6 +8,6 @@ function ims = load_mats(mat_path)
         im = ifftshift(ifft2(kspace.kSpace));
         % Average, use first coil
         avg = squeeze(sum(im,3))/size(im,3);
-        ims(:,:,k) = avg(:,:,1);
+        ims{k} = avg(:,:,1);
     end
 end

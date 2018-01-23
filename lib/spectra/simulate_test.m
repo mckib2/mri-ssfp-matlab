@@ -35,3 +35,9 @@ h3 = compare_plot(cp,abs(Q3*c3),'Simulated Castle, centered Pulse');
 % Offcenter Pulse
 [ Q4, c4 ] = simulate(alpha, dphi, TEs, TRs, T1, T2, fMax,ocp,0);
 h4 = compare_plot(ocp,abs(Q4*c4),'Simulated Castle, off-center Pulse');
+
+% Apply to image
+ims = load_mats('/home/ecestudent/Documents/sample-data/SSFP Spectral Profile ShortTR 12152017');
+ims0 = ims{1,1};
+toapply = reshape(cell2mat(ims(1,:)),size(ims0,1),size(ims0,2),6);
+apply(c4,abs(toapply));

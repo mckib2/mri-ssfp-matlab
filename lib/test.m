@@ -1,8 +1,8 @@
 
 alpha = 0.5 * pi;
 dphi = 0;
-T1 = 0.270;
-T2 = 0.085;
+T1 = .79;
+T2 = 0.092;
 fMax = 165;
 
 [ M, f, beta ] = ssfp_spectrum(alpha, dphi, 0.003, 0.006, T1, T2, fMax);
